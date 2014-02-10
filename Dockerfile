@@ -13,3 +13,4 @@ RUN apt-get install -qq -y oracle-java7-installer
 RUN wget "https://github.com/OpenRefine/OpenRefine/releases/download/2.6-beta.1/openrefine-linux-2.6-beta.1.tar.gz"
 RUN tar xf openrefine-linux-2.6-beta.1.tar.gz && rm openrefine*gz && mv openrefine-* /opt/openrefine
 ADD refine.ini /opt/openrefine/refine.ini
+ENTRYPOINT /opt/openrefine/refine
