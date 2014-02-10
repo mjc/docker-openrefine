@@ -1,6 +1,6 @@
 FROM ubuntu
 MAINTAINER Michael J. Cohen, mjc@kernel.org
-RUN apt-get update
+RUN apt-get update -qq
 # software-properties-common on 12.10+
 RUN apt-get install -qq -y python-software-properties
 RUN add-apt-repository ppa:webupd8team/java
